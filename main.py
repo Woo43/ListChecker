@@ -1,6 +1,6 @@
 a_list = open("list.txt").readlines()
 dedupelist = list(dict.fromkeys(a_list))
+print(dedupelist)
 cool_thing = open("final.txt", "w+")
-for x in cool_thing:
-    x = x.replace("\n", "")
-cool_thing.write(str(x))
+y = [x.replace('\n', '') for x in dedupelist]
+cool_thing.write(str(y))
